@@ -2,7 +2,7 @@ class TweetsController < ApplicationController
 
     get "/tweets" do
       if Helpers.logged_in?(session)
-        erb :"tweets/tweets", render layout: :layout
+        erb :"tweets/tweets", render :layout => :layout
       else
         redirect to "/login"
       end
